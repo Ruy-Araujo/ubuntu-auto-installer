@@ -21,3 +21,9 @@ rm discord.deb
 highlighted_message "Discord installed successfully."
 
 highlighted_message "Brave Browser and Discord installed successfully."
+
+# Notion  
+highlighted_message "Installing Notion..."
+snap install notion-snap
+highlighted_message "Notion installed successfully."
+
