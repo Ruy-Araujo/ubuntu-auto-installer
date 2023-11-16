@@ -6,9 +6,9 @@ highlighted_message() {
 }
 
 # Extension Manager
-highlighted_message "Installing Extension Manager"
-sudo apt-get install gnome-shell-extension-prefs -y
-highlighted_message "Extension Manager installed successfully"
+# highlighted_message "Installing Extension Manager"
+# sudo apt-get install gnome-shell-extension-prefs -y
+# highlighted_message "Extension Manager installed successfully"
 
 # bluetooth-quick-connect
 highlighted_message "Installing bluetooth-quick-connect"
