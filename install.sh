@@ -90,3 +90,7 @@ highlighted_message "Installing Web Tools..."
 ./scripts/web_tools.sh
 highlighted_message "Web Tools installed successfully."
 
+# Post-install
+
+# Set zsh as default shell
+chsh -s $(which zsh)

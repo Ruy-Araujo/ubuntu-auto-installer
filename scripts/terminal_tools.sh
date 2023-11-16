@@ -7,11 +7,7 @@ highlighted_message() {
 
 # ZSH
 highlighted_message "Installing zsh..."
-
 sudo apt install zsh -y
-# Set zsh as default shell
-chsh -s $(which zsh)
-
 highlighted_message "zsh installed successfully."
 
 # Oh My Zsh
@@ -40,5 +36,3 @@ git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugi
 # Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
 sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/g' ~/.zshrc
 highlighted_message "zsh-autosuggestions installed successfully."
-
-
