@@ -40,10 +40,7 @@ echo "⠀⠀⠀⠀⠀⠀⣀⣀⣀⣀⣀⣀⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⢀�
 "
 
 
-
-
-# Função para imprimir mensagens destacadas
-print_highlighted_message() {
+highlighted_message() {
   message="$1"
   length=${#message}
 
@@ -59,37 +56,37 @@ print_highlighted_message() {
 chmod +x ./scripts/*.sh
 
 # Basic Tools
-print_highlighted_message "Installing Basic Tools..."
+highlighted_message "Installing Basic Tools..."
 ./scripts/basic_tools.sh
-print_highlighted_message "Basic Tools installed successfully."
+highlighted_message "Basic Tools installed successfully."
 
 # Terminal Tools
-print_highlighted_message "Installing Terminal Tools..."
+highlighted_message "Installing Terminal Tools..."
 ./scripts/terminal_tools.sh
-print_highlighted_message "Terminal Tools installed successfully."
+highlighted_message "Terminal Tools installed successfully."
 
 # Dev Tools
-print_highlighted_message "Installing Dev Tools..."
+highlighted_message "Installing Dev Tools..."
 ./scripts/dev_tools.sh
-print_highlighted_message "Dev Tools installed successfully."
+highlighted_message "Dev Tools installed successfully."
 
 # infra-tools
-print_highlighted_message "Installing Infra Tools..."
+highlighted_message "Installing Infra Tools..."
 ./scripts/infra_tools.sh
-print_highlighted_message "Infra Tools installed successfully."
+highlighted_message "Infra Tools installed successfully."
 
 # Azure Tools
-print_highlighted_message "Installing Azure Tools..."
+highlighted_message "Installing Azure Tools..."
 ./scripts/azure_tools.sh
-print_highlighted_message "Azure Tools installed successfully."
+highlighted_message "Azure Tools installed successfully."
 
 # Data Tools
-print_highlighted_message "Installing Data Tools..."
+highlighted_message "Installing Data Tools..."
 ./scripts/data_tools.sh
-print_highlighted_message "Data Tools installed successfully."
+highlighted_message "Data Tools installed successfully."
 
 # Web Tools
-print_highlighted_message "Installing Web Tools..."
+highlighted_message "Installing Web Tools..."
 ./scripts/web_tools.sh
-print_highlighted_message "Web Tools installed successfully."
+highlighted_message "Web Tools installed successfully."
 
