@@ -94,3 +94,6 @@ highlighted_message "Web Tools installed successfully."
 
 # Set zsh as default shell
 chsh -s $(which zsh)
+apt update
+apt upgrade -y
+apt autoremove -y
