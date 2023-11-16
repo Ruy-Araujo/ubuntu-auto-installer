@@ -13,9 +13,7 @@ highlighted_message "Azure CLI installed successfully."
 
 # Azure Storage Explorer
 highlighted_message "Installing Azure Storage Explorer..."
-wget https://go.microsoft.com/fwlink/?LinkId=722418 -O storageexplorer.deb
-dpkg -i storageexplorer.deb
-rm storageexplorer.deb
+sudo snap install storage-explorer
 highlighted_message "Azure Storage Explorer installed successfully."
 
 # Azure Functions Core Tools
@@ -26,6 +24,16 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsof
 apt update
 sudo apt-get install azure-functions-core-tools-4 -y
 highlighted_message "Azure Functions Core Tools installed successfully."
+
+# Azure Data Studio
+highlighted_message "Installing Azure Data Studio..."
+sudo apt install curl apt-transport-https -y
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" > /etc/apt/sources.list.d/azure-cli.list'
+apt update
+sudo apt-get install azuredatastudio -y
+highlighted_message "Azure Data Studio installed successfully."
 
 # Teams
 highlighted_message "Installing Microsoft Teams..."
