@@ -5,12 +5,6 @@ highlighted_message() {
   echo "▁▂▃▅▆▓▒░ $message ░▒▓▆▅▃▂▁"
 }
 
-# Update
-highlighted_message "Updating Ubuntu..."
-sudo apt update -y
-sudo apt upgrade -y
-highlighted_message "Ubuntu updated successfully."
-
 # Curl
 highlighted_message "Installing Curl..."
 sudo apt install curl -y
