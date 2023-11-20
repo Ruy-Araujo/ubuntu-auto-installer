@@ -10,6 +10,9 @@ highlighted_message() {
 # sudo apt-get install gnome-shell-extension-prefs -y
 # highlighted_message "Extension Manager installed successfully"
 
+# Create extensions folder
+sudo mkdir -p ~/.local/share/gnome-shell/extensions
+
 # bluetooth-quick-connect
 highlighted_message "Installing bluetooth-quick-connect"
 wget https://extensions.gnome.org/extension-data/bluetooth-quick-connectbjarosze.gmail.com.v34.shell-extension.zip
