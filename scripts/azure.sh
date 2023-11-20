@@ -38,7 +38,7 @@ highlighted_message "Azure Data Studio installed successfully."
 # Teams
 highlighted_message "Installing Microsoft Teams..."
 curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-highlighted_message "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list
 apt update
-apt install teams -y
+apt install teams
 highlighted_message "Microsoft Teams installed successfully."
