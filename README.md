@@ -115,3 +115,16 @@ At the moment, this project is only compatible with Ubuntu 20.04.3 LTS (Focal Fo
 ### Other
 
 - [KeepassXC](https://keepassxc.org/ "KeepassXC")
+
+## How to use
+
+Download project and run the install script:
+
+```bash
+wget https://github.com/Ruy-Araujo/ubuntu-auto-installer/archive/master.tar.gz
+tar -xvf master.tar.gz
+rm master.tar.gz
+cd ubuntu-auto-installer-master
+chmod +x install.sh
+./install.sh
+```
