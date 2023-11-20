@@ -8,7 +8,6 @@ highlighted_message() {
 
 # Vscode
 highlighted_message "Installing Vscode..."
-sudo apt install snapd
 sudo snap install code --classic
 highlighted_message "Vscode installed successfully."
 

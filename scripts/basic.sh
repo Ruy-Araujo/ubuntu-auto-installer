@@ -15,3 +15,7 @@ highlighted_message "Installing Git..."
 sudo apt install git -y
 highlighted_message "Git installed successfully."
 
+# Snap
+highlighted_message "Installing Snap..."
+sudo apt install snapd -y
+highlighted_message "Snap installed successfully."
