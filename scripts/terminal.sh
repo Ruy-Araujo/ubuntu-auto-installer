@@ -21,7 +21,7 @@ highlighted_message "Oh My Zsh installed successfully."
 highlighted_message "Installing Powerlevel10k Theme..."
 # Install the recommended font
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Meslo.tar.xz
-tar -xf Meslo.tar.xz -C ~/.local/share/fonts/
+mkdir -p ~/.local/share/fonts/ && tar -xf Meslo.tar.xz -C ~/.local/share/fonts/
 # Clone the theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
