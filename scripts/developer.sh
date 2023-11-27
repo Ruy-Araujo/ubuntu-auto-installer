@@ -18,11 +18,11 @@ highlighted_message "Postman installed successfully."
 
 # Python PIP
 highlighted_message "Installing Python PIP..."
-sudo apt install python3-pip
+sudo apt install python3-pip -y
 highlighted_message "Python PIP installed successfully."
 
 # Python Virtualenv
 highlighted_message "Installing Python Virtualenv..."
-sudo apt install python3-virtualenv
+sudo apt install python3-virtualenv -y
 highlighted_message "Python Virtualenv installed successfully."
 
