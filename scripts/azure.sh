@@ -27,12 +27,9 @@ highlighted_message "Azure Functions Core Tools installed successfully."
 
 # Azure Data Studio
 highlighted_message "Installing Azure Data Studio..."
-sudo apt install curl apt-transport-https -y
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" > /etc/apt/sources.list.d/azure-cli.list'
-apt update
-sudo apt-get install azuredatastudio -y
+wget https://sqlopsbuilds.azureedge.net/stable/c7c2b2f21505562d21972d4c135119d00806db4f/azuredatastudio-linux-1.47.0.deb
+sudo dpkg -i azuredatastudio-linux-1.47.0.deb
+rm azuredatastudio-linux-1.47.0.deb
 highlighted_message "Azure Data Studio installed successfully."
 
 # Teams
