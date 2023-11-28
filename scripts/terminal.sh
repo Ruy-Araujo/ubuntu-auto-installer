@@ -20,19 +20,25 @@ highlighted_message "Oh My Zsh installed successfully."
 # Powerlevel10k
 highlighted_message "Installing Powerlevel10k Theme..."
 # Install the recommended font
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/Meslo.tar.xz
-mkdir -p ~/.local/share/fonts/ && tar -xf Meslo.tar.xz -C ~/.local/share/fonts/
+mkdir -p ~/.local/share/fonts/
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf -P ~/.local/share/fonts/
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf -P ~/.local/share/fonts/
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf -P ~/.local/share/fonts/
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf -P ~/.local/share/fonts/
 # Clone the theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # Set ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc.
 sed -i 's/ZSH_THEME="robbyrussell"/ZSH_THEME="powerlevel10k\/powerlevel10k"/g' ~/.zshrc
-# Remove the archive
-rm Meslo.tar.xz
 highlighted_message "Powerlevel10k Theme installed successfully."
 
-# zsh autosuggestions
-highlighted_message "Installing zsh-autosuggestions..."
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
-# Add the plugin to the list of plugins for Oh My Zsh to load (inside ~/.zshrc):
-sed -i 's/plugins=(git)/plugins=(git zsh-autosuggestions)/g' ~/.zshrc
-highlighted_message "zsh-autosuggestions installed successfully."
+# zsh-snap
+highlighted_message "Installing zsh-snap..."
+echo '[[ -r ~/Repos/znap/znap.zsh ]] ||
+    git clone --depth 1 -- \
+        https://github.com/marlonrichert/zsh-snap.git ~/Repos/znap
+source ~/Repos/znap/znap.zsh' >> ~/.zshrc
+
+# zsh-syntax-highlighting
+highlighted_message "Installing zsh-syntax-highlighting..."
+sudo apt install zsh-syntax-highlighting
+highlighted_message "zsh-syntax-highlighting installed successfully."
