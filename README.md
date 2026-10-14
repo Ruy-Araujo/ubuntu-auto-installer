@@ -128,3 +128,11 @@ cd ubuntu-auto-installer-master
 chmod +x install.sh
 ./install.sh
 ```
+
+O menu é controlado pelo teclado:
+
+- Use `↑` e `↓` para mover o cursor. No menu principal, `Enter` abre a opção atual.
+- **Instalação completa** executa todas as categorias e as etapas finais de atualização.
+- **Selecionar itens para instalar** abre a lista de categorias.
+- Na lista de categorias, `Enter` marca ou desmarca todos os itens daquela categoria e `→` abre seu submenu.
+- Nos submenus, `Enter` marca ou desmarca cada aplicação; as marcações permanecem ao voltar e abrir outro submenu. Use `I`, na lista de categorias, para instalar todas as aplicações marcadas de uma única vez. A tecla `A` alterna todos os itens da categoria e `Esc` volta.
