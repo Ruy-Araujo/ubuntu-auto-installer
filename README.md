@@ -66,6 +66,10 @@ At the moment, this project is only compatible with Ubuntu 20.04.3 LTS (Focal Fo
 - [Azure Data Studio](https://docs.microsoft.com/en-us/sql/azure-data-studio/download-azure-data-studio?view=sql-server-ver15 "Azure Data Studio")
 - [Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app "Teams")
 
+### GCP
+
+- [Google Cloud CLI](https://cloud.google.com/sdk/docs/install "Google Cloud CLI")
+
 ### Data
 
 - [DBeaver](https://dbeaver.io/ "DBeaver")

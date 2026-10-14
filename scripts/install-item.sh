@@ -34,6 +34,13 @@ case "$item" in
     ;;
   azure-data-studio) wget https://sqlopsbuilds.azureedge.net/stable/c7c2b2f21505562d21972d4c135119d00806db4f/azuredatastudio-linux-1.47.0.deb && sudo dpkg -i azuredatastudio-linux-1.47.0.deb && rm azuredatastudio-linux-1.47.0.deb ;;
   teams) curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add - && echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" | sudo tee /etc/apt/sources.list.d/teams.list > /dev/null && sudo apt update && sudo apt install teams -y ;;
+  google-cloud-cli)
+    sudo apt-get update
+    sudo apt-get install -y ca-certificates gnupg curl
+    curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor --yes -o /usr/share/keyrings/cloud.google.gpg
+    echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" | sudo tee /etc/apt/sources.list.d/google-cloud-sdk.list > /dev/null
+    sudo apt-get update && sudo apt-get install -y google-cloud-cli
+    ;;
   dbeaver) wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add - && echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list > /dev/null && sudo apt update && sudo apt install dbeaver-ce -y ;;
   brave) curl -fsSLo /usr/share/keyrings/brave-browser-beta-archive-keyring.gpg https://brave-browser-apt-beta.s3.brave.com/brave-browser-beta-archive-keyring.gpg && echo "deb [signed-by=/usr/share/keyrings/brave-browser-beta-archive-keyring.gpg] https://brave-browser-apt-beta.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-beta.list > /dev/null && sudo apt update && sudo apt install brave-browser-beta -y ;;
   discord) wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb" && sudo dpkg -i discord.deb && rm discord.deb ;;
